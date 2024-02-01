@@ -9,7 +9,11 @@ spec:
   selector:
     matchLabels:
       app: test1
-  strategy: {}
+  strategy: 
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
   template:
     metadata:
       labels:
