@@ -1,0 +1,72 @@
+    1  ls
+    2  cat /root/.ssh/id_rsa.pub 
+    3  ssh -T git@github.com
+    4  ssh -T git@github.com
+    5  git init
+    6  mkdir k8s-alm-deployments
+    7  cd k8s-alm-deployments/
+    8  ls
+    9  git init 
+   10  git config -l 
+   11  git config --global user.name "gurugren"
+   12  git config --global user.name "gurugreen"
+   13  git config --global user.email "guruprasanna.green@gmail.com"
+   14  git config -l 
+   15  echo "# k8s-alm-deployments" >> README.md
+   16  ls
+   17  cat README.md 
+   18  git add .
+   19  git status
+   20  git commit -m "first commit"
+   21  git branch --help
+   22  git branch -M main 
+   23  git branch 
+   24  git remote add origin git@github.com:gurugreen/k8s-alm-deployments.git
+   25  git status
+   26  git push -u origin main 
+   27  git push -u origin main 
+   28  ls
+   29  git test-dep.yaml
+   30  vi test-dep.yaml
+   31  ls
+   32  cat test-dep.yaml 
+   33  k apply -f test-dep.yaml 
+   34  vi test-dep.yaml 
+   35  k apply -f test-dep.yaml 
+   36  k get all 
+   37  k get deployments.apps -w
+   38  ls
+   39  k get all 
+   40  ls
+   41  k create service nodeport test --tcp 80:8080 --node-port 30080 --dry-run=client -o yaml 
+   42  k create service nodeport test --tcp 80:8080 --node-port 30080 --dry-run=client -o yaml > test-service.yaml
+   43  ls
+   44  cat test-service.yaml 
+   45  vi test-service.yaml 
+   46  ls
+   47  k apply -f test-service.yaml 
+   48  k get all 
+   49  ls
+   50  cat test-dep.yaml 
+   51  ls
+   52  cat test1-dep.yaml 
+   53  vi test1-dep.yaml 
+   54  ls
+   55  k apply -f test1-dep.yaml 
+   56  k get all 
+   57  k get deployments.apps 
+   58  k get deployments.apps -o yaml 
+   59  k get deployments.apps -o yaml | less
+   60  k create deployment --help 
+   61  ls
+   62  cat test1-dep.yaml 
+   63  k get deployments.apps 
+   64  k get deployments.apps test1 -o yaml | less
+   65  ls
+   66  git status
+   67  git add . 
+   68  git commit -m "second commit"
+   69  git status
+   70  git push 
+   71  history 
+   72  history > history1.txt

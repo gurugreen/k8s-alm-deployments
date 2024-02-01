@@ -1,0 +1,20 @@
+    1  pwd
+    2  k explain deployments --recursive > dep.yaml 
+    3  ls
+    4  history 
+    5  ls
+    6  apt-get update -y
+    7  apt-get install less -y
+    8  ls
+    9  ls
+   10  less dep.yaml 
+   11  ls
+   12  k create deployment test1 --replicas 3 --port 8080 --image kodekloud/webapp-color:v1 --dry-run=client -o yaml 
+   13  k create deployment test1 --replicas 3 --port 8080 --image kodekloud/webapp-color:v1 --dry-run=client -o yaml > test1-dep.yaml 
+   14  ls
+   15  mv test1-dep.yaml k8s-alm-deployments/
+   16  ls
+   17  ls
+   18  ls
+   19  history 
+   20  history > history2.txt
