@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test
+  labels:
+    name: test
+    app: test
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: test
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      name: test
+      labels:
+        name: test
+        app: test
+    spec:
+      containers:
+      - name: test
+        image: kodekloud/webapp-color:v1
+        ports:
+        - containerPort: 8080
